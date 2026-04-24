@@ -1,12 +1,11 @@
-const getAllUsers = (req, res) => {
-    return res.json([
-        {
-            id: 1,
-            name: "Edneuza"
-        }
+const userModel = require("../models/userModel")
 
-    ])
+const getAllUsers = (req, res) => {
+    const users = userModel.findAll()
+
+    return res.json(users)
+  
 }
-module.exports = {
+module.exports={
     getAllUsers
 }

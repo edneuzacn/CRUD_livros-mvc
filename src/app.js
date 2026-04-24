@@ -7,14 +7,11 @@ app.get("/", (request, response) => {
     response.send("Temos porém este tesouro em vasos de barro, para que a excelencia do poder seja de Deus e não de nós IICo 4:7")
 })
 
-app.get("/users", userControlller.getAllUsers) (req, res) => {
-    return res.json([
-        {
-            id: 1,
-            name: "Edneuza"
-        }
+app.get("/users", userController.getAllUsers) 
 
-    ])
+app.post("/users", (req, res) => {
+    res.send("Estamos testando!")
 })
+
 module.exports = app
 
